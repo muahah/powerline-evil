@@ -93,14 +93,14 @@
                           (lhs (list (if evil-mode
                                          (powerline-raw (powerline-evil-tag) mode-line))
                                      (powerline-buffer-id `(mode-line-buffer-id ,mode-line) 'l)
-                                     (powerline-raw "[" mode-line 'l)
-                                     (powerline-major-mode mode-line)
-                                     (powerline-process mode-line)
-                                     (powerline-raw "]" mode-line)
                                      (when (buffer-modified-p)
                                        (powerline-raw "[+]" mode-line))
                                      (when buffer-read-only
                                        (powerline-raw "[RO]" mode-line))
+                                     (powerline-raw "[" mode-line 'l)
+                                     (powerline-major-mode mode-line)
+                                     (powerline-process mode-line)
+                                     (powerline-raw "]" mode-line)
                                      (powerline-raw "[%z]" mode-line)
                                      ;; (powerline-raw (concat "[" (mode-line-eol-desc) "]") mode-line)
                                      (when (and (boundp 'which-func-mode) which-func-mode)
